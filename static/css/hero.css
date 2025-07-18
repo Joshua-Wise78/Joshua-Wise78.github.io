@@ -1,9 +1,7 @@
 .hero-section {
   margin-top: 2rem;
   padding: 1rem 0;
-  min-height: calc(
-    90vh - 60px
-  ); 
+  min-height: calc(90vh - 60px);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -14,7 +12,7 @@
   gap: 2rem;
   align-items: stretch;
   flex: 4;
-  margin-bottom: 1rem; 
+  margin-bottom: 1rem;
 }
 
 .portfolio-photo {
@@ -43,28 +41,58 @@
   color: white;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   display: flex;
+  /* flex-direction: column;
+  justify-content: center; */
   flex-direction: column;
-  justify-content: center;
+  width: 100%;
+}
+
+.about-section {
+  padding-bottom: 25px;
 }
 
 .about-content h1 {
-  font-size: 2.2rem;
+  font-size: 36px;
   margin-bottom: 0.5rem;
   font-weight: bold;
 }
 
-.about-content p {
-  font-size: 1.1rem;
-  margin-bottom: 1rem;
-  line-height: 1.7;
-  color: #fff;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+.about-content h3 {
+  font-size: 20px;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
 }
 
+.about-content h4 {
+  font-size: 24px;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.divider-about {
+  min-height: 2px;
+  background-color: #e6efef;
+}
+
+/* Updated styles for about-links */
 .about-links {
-  text-decoration: underline;
+  list-style: none; /* Ensure no default list styling */
+  padding: 0;
+}
+
+.about-links li {
+  margin-bottom: 1rem; /* Space between list items */
+}
+
+.about-links li a {
+  text-decoration: none; /* Remove underline */
   font-weight: bold;
   color: #e6efef;
+  font-size: 1.5rem; /* Make links larger */
+  display: flex; /* Allow content to align */
+  align-items: center; /* Vertically align icon and text */
+  gap: 10px; /* Space between icon and text */
+  transition: color 0.3s ease;
 }
 
 .skills {
@@ -96,7 +124,7 @@
   border-radius: 12px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   color: #333;
-  flex: 1; 
+  flex: 1;
   margin-top: auto;
 }
 
@@ -126,7 +154,7 @@
 /* Hero Section Responsive */
 @media (max-width: 768px) {
   .hero-section {
-    min-height: auto; 
+    min-height: auto;
     padding: 1rem 0;
   }
   .hero-content {
