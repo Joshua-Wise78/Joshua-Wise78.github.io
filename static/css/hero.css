@@ -41,8 +41,6 @@
   color: white;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   display: flex;
-  /* flex-direction: column;
-  justify-content: center; */
   flex-direction: column;
   width: 100%;
 }
@@ -74,24 +72,30 @@
   background-color: #e6efef;
 }
 
-/* Updated styles for about-links */
 .about-links {
-  list-style: none; /* Ensure no default list styling */
+  list-style: none;
   padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: space-between;
 }
 
 .about-links li {
-  margin-bottom: 1rem; /* Space between list items */
+  padding: 15px 0;
+  margin-bottom: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .about-links li a {
-  text-decoration: none; /* Remove underline */
+  text-decoration: none;
   font-weight: bold;
   color: #e6efef;
-  font-size: 1.5rem; /* Make links larger */
-  display: flex; /* Allow content to align */
-  align-items: center; /* Vertically align icon and text */
-  gap: 10px; /* Space between icon and text */
+  font-size: 2rem;
   transition: color 0.3s ease;
 }
 
@@ -105,19 +109,6 @@
   font-weight: bold;
 }
 
-.skills ul {
-  list-style: none;
-  padding-left: 0;
-}
-
-.skills ul li {
-  background: rgba(255, 255, 255, 0.2);
-  padding: 0.5rem 1rem;
-  margin-bottom: 0.5rem;
-  border-radius: 8px;
-  font-size: 0.9rem;
-}
-
 .skills-section {
   padding: 1.5rem;
   background-color: #e6efef;
@@ -126,6 +117,7 @@
   color: #333;
   flex: 1;
   margin-top: auto;
+  overflow: hidden;
 }
 
 .skills-section h2 {
@@ -138,8 +130,9 @@
   list-style: none;
   padding: 0;
   display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
+  flex-wrap: nowrap;
+  min-width: max-content;
+  animation: scrollRight 25s linear infinite;
 }
 
 .skills-section ul li {
@@ -149,6 +142,29 @@
   border-radius: 20px;
   font-size: 0.9rem;
   font-weight: 500;
+  flex-shrink: 0;
+  margin-right: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 15px;
+}
+
+.skill-label {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Keyframes for the left-to-right scrolling animation */
+@keyframes scrollRight {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
 }
 
 /* Hero Section Responsive */
