@@ -1,7 +1,7 @@
 .relevent-section {
   margin-top: 2rem;
   padding: 1rem 0;
-  min-height: calc(90vh - 60px);
+  min-height: 90vh; /* Adjusted for navbar height */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -26,9 +26,7 @@
   flex-direction: column;
   justify-content: space-between; /* Distribute content vertically */
   border-left: 3px solid #007bff; /* Solid line on the left */
-  min-height: calc(
-    (90vh - 60px) * 0.66
-  ); /* Approximately 2/3 of section's min-height */
+  min-height: calc(90vh * 0.66); /* Approximately 2/3 of section's min-height */
 }
 
 .relevent-segment h2 {
@@ -59,6 +57,69 @@
   margin-left: -1em;
 }
 
+.skills-section {
+  padding: 1.5rem;
+  background-color: #e6efef;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  color: #333;
+  flex: 1;
+  margin-top: auto;
+  overflow: hidden;
+  min-height: 90vh; /* Adjusted for navbar height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.skills-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #007bff;
+}
+
+.skills-section ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: nowrap;
+  min-width: max-content;
+  animation: scrollRight 25s linear infinite;
+}
+
+.skills-section ul li {
+  background-color: #cce0e0;
+  color: #333;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  flex-shrink: 0;
+  margin-right: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 15px;
+}
+
+.skill-label {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Keyframes for the left-to-right scrolling animation */
+@keyframes scrollRight {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
 /* Responsive adjustments for segments */
 @media (max-width: 768px) {
   .relevent-content {
@@ -70,6 +131,16 @@
     width: 90%; /* Take more width on smaller screens */
     margin-bottom: 20px; /* Space between stacked segments */
     min-height: auto; /* Allow height to adjust to content */
+  }
+
+  .skills-section {
+    padding: 1.5rem;
+  }
+  .skills-section h2 {
+    font-size: 1.8rem;
+  }
+  .skills-section ul li {
+    font-size: 0.85rem;
   }
 }
 
@@ -83,5 +154,12 @@
   }
   .relevent-segment ul li {
     font-size: 0.9rem;
+  }
+
+  .skills-section {
+    padding: 1rem;
+  }
+  .skills-section h2 {
+    font-size: 1.6rem;
   }
 }
