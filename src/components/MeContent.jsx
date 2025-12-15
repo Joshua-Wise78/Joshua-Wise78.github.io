@@ -29,7 +29,7 @@ function MeSection() {
       <div
         className="absolute inset-0 w-full h-full bg-cover bg-center"
         style={{
-          backgroundImage: "url('../../public/backdrop3.jpg')",
+          backgroundImage: "url('/backdrop3.jpg')",
         }}
       >
         <div className="absolute inset-0 w-full h-full bg-black opacity-40"></div>
@@ -37,7 +37,6 @@ function MeSection() {
 
       <div className="relative text-center text-white p-4">
         <h1 className="text-5xl font-bold">Hello I'm Joshua Wise</h1>
-        {/* This will now update correctly */}
         <p className="text-4xl font-semibold">I'm a {currWord}</p>
         <p className="mt-4 text-2xl">Welcome to my playground.</p>
       </div>
